@@ -8,11 +8,12 @@
 import os
 import glob
 import configparser
+from logging.handlers import RotatingFileHandler
+
 from rich.console import Console
 from rich.logging import RichHandler
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeElapsedColumn, TimeRemainingColumn
 import logging
-import sys
 import io
 
 # 初始化 Rich 控制台
@@ -47,14 +48,13 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         RichHandler(console=console, rich_tracebacks=True),
-        logging.FileHandler(log_file,
-                            mode='w',
-                            encoding='utf-8',
-                            maxBytes=10 * 1024 * 1024, backupCount=5) if overwrite else logging.FileHandler(log_file,
-                                                                                                            mode='a',
-                                                                                                            encoding='utf-8',
-                                                                                                            maxBytes=10 * 1024 * 1024,
-                                                                                                            backupCount=5)
+        RotatingFileHandler(
+            log_file,
+            mode='w' if overwrite else 'a',
+            encoding='utf-8',
+            maxBytes=10 * 1024 * 1024,
+            backupCount=5
+        )
     ]
 )
 
