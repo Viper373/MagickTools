@@ -117,10 +117,12 @@
 
     在提示符下输入您需要转换的 `curl` 命令。例如：
     - **`Python(requests)`**
+   
     ```bash
     curl -X POST https://api.example.com/data -H "Content-Type: application/json" -d '{"key":"value"}'
     ```
     - **`Java(java-okhttp)`**
+   
     ```bash
     curl -X GET https://api.example.com/data -H "Authorization: Bearer YOUR_TOKEN"
     ```
@@ -130,6 +132,7 @@
     转换完成后，生成的代码将以代码块形式显示在控制台中。
     示例：
     - **`Python(requests)`**
+   
     ```python
     import requests
 
@@ -146,6 +149,7 @@
     ```
    
     - **`Java(java-okhttp)`**
+   
     ```java
     OkHttpClient client = new OkHttpClient();
 
