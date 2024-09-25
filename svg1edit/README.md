@@ -1,6 +1,7 @@
 # SVG1Edit ✏️📐
 
-ModifySVG 是一个用于批量修改 `.svg` 文件尺寸的 Python 脚本。该脚本可以将指定目录下的所有 SVG 文件的宽度和高度进行调整，并支持自定义文件模式、默认尺寸以及覆盖选项。通过 Rich 库提供美观的进度条和日志输出，提升用户体验。
+ModifySVG 是一个用于批量修改 `.svg` 文件尺寸的 Python 脚本。该脚本可以将指定目录下的所有 SVG 文件的宽度和高度进行调整，并支持自定义文件模式、默认尺寸以及覆盖选项。通过 Rich
+库提供美观的进度条和日志输出，提升用户体验。
 
 ## 特性 ✨
 
@@ -10,38 +11,11 @@ ModifySVG 是一个用于批量修改 `.svg` 文件尺寸的 Python 脚本。该
 - **灵活配置**：通过 `config.cfg` 文件设置输入、输出目录、文件模式、默认尺寸和覆盖选项
 - **日志记录**：详细记录修改过程中的信息和错误，便于调试和审查
 
-## 环境要求 🛠️
+## 使用方法 📦
 
-- **Python 版本**：**`>= 3.12.1`**
+1. **配置 `config.cfg` 文件**
 
-## 使用方法 📦（推荐使用虚拟环境）
-
-1. **克隆或下载项目**
-
-    ```bash
-    git clone https://github.com/Viper373/MagickTools.git
-    cd MagickTools/svg1edit
-    ```
-
-2. **创建并激活虚拟环境**
-
-    ```bash
-    python -m venv venv
-    # Windows
-    venv\Scripts\activate
-    # macOS/Linux
-    source venv/bin/activate
-    ```
-
-3. **安装依赖**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **配置 `config.cfg` 文件**
-
-    在项目根目录下，创建或编辑 `config.cfg` 文件，内容如下：
+   在项目根目录下，创建或编辑 `config.cfg` 文件，内容如下：
 
     ```ini
     [default]
@@ -54,7 +28,7 @@ ModifySVG 是一个用于批量修改 `.svg` 文件尺寸的 Python 脚本。该
     new_height = 默认新的高度
     ```
 
-    **示例：**
+   **示例：**
 
     ```ini
     [default]
@@ -67,19 +41,20 @@ ModifySVG 是一个用于批量修改 `.svg` 文件尺寸的 Python 脚本。该
     new_height = 600
     ```
 
-5. **准备输入目录**
+2. **准备输入目录**
 
-    将您想要修改尺寸的 `.svg` 文件放入 `input_directory` 指定的目录中。脚本会根据 `file_pattern` 匹配文件，并进行修改。
+   将您想要修改尺寸的 `.svg` 文件放入 `input_directory` 指定的目录中。脚本会根据 `file_pattern` 匹配文件，并进行修改。
 
-6. **运行脚本**
+3. **运行脚本**
 
     ```bash
+    cd svg1edit
     python main.py
     ```
 
-7. **查看输出**
+4. **查看输出**
 
-    修改完成后，新的 SVG 文件将保存到 `output_directory` 指定的目录中，文件名格式为 `new_<原文件名>.svg`。例如，`logo.svg` 将被保存为 `new_logo.svg`。
+   修改完成后，新的 SVG 文件将保存到 `output_directory` 指定的目录中，文件名格式为 `new_<原文件名>.svg`。例如，`logo.svg` 将被保存为 `new_logo.svg`。
 
 ## 代码结构 🗂️
 

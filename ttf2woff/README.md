@@ -9,38 +9,11 @@ TTF2WOFF 是一个用于批量将 TTF 字体文件转换为 WOFF 和 WOFF2 格�
 - **美观的进度显示**：使用 Rich 库实时显示转换进度和状态
 - **灵活配置**：通过 `config.py` 文件设置输入、输出目录、输出格式和子集字符集
 
-## 环境要求 🛠️
+## 使用方法 📦
 
-- **Python 版本**：**`>= 3.12.1`**
+1. **配置 `config.py` 文件**
 
-## 使用方法 📦（推荐使用虚拟环境）
-
-1. **克隆或下载项目**
-
-    ```bash
-    git clone https://github.com/Viper373/MagickTools.git
-    cd MagickTools/ttf2woff
-    ```
-
-2. **创建并激活虚拟环境**
-
-    ```bash
-    python -m venv venv
-    # Windows
-    venv\Scripts\activate
-    # macOS/Linux
-    source venv/bin/activate
-    ```
-
-3. **安装依赖**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **配置 `config.py` 文件**
-
-    在项目根目录下，创建或编辑 `config.py` 文件，内容如下：
+   在项目根目录下，创建或编辑 `config.py` 文件，内容如下：
 
     ```python
     TTF_DIR = "输入 TTF 字体文件的目录路径"
@@ -49,7 +22,7 @@ TTF2WOFF 是一个用于批量将 TTF 字体文件转换为 WOFF 和 WOFF2 格�
     SUBSET_CHARS = "保留的字符集"  # 例如 "Hello World"
     ```
 
-    **示例：**
+   **示例：**
 
     ```python
     TTF_DIR = "./ttf"
@@ -58,19 +31,20 @@ TTF2WOFF 是一个用于批量将 TTF 字体文件转换为 WOFF 和 WOFF2 格�
     SUBSET_CHARS = "你好，世界！1234567890"  # 添加更多字符以保留
     ```
 
-5. **准备输入目录**
+2. **准备输入目录**
 
-    将您想要转换的 TTF 字体文件放入 `TTF_DIR` 指定的目录中。脚本会遍历该目录下的所有 TTF 文件，并进行转换。
+   将您想要转换的 TTF 字体文件放入 `TTF_DIR` 指定的目录中。脚本会遍历该目录下的所有 TTF 文件，并进行转换。
 
-6. **运行脚本**
+3. **运行脚本**
 
     ```bash
+    cd ttf2woff
     python main.py
     ```
 
-7. **查看输出**
+4. **查看输出**
 
-    转换完成后，WOFF 和 WOFF2 字体文件将保存到 `WOFF_DIR` 指定的目录中。
+   转换完成后，WOFF 和 WOFF2 字体文件将保存到 `WOFF_DIR` 指定的目录中。
 
 ## 代码结构 🗂️
 

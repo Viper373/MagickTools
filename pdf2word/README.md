@@ -9,38 +9,11 @@ PDFConverter 是一个用于批量将 PDF 文件转换为 Word 文档的 Python 
 - **美观的进度显示**：使用 Rich 库实时显示转换进度和状态
 - **灵活配置**：通过 `config.cfg` 文件设置输入、输出目录和并行进程数
 
-## 环境要求 🛠️
+## 使用方法 📦
 
-- **Python 版本**：**`>= 3.12.1`**
+1. **配置 `config.cfg` 文件**
 
-## 使用方法 📦（推荐使用虚拟环境）
-
-1. **克隆或下载项目**
-
-    ```bash
-    git clone https://github.com/Viper373/MagickTools.git
-    cd MagickTools/pdf2word
-    ```
-
-2. **创建并激活虚拟环境**
-
-    ```bash
-    python -m venv venv
-    # Windows
-    venv\Scripts\activate
-    # macOS/Linux
-    source venv/bin/activate
-    ```
-
-3. **安装依赖**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **配置 `config.cfg` 文件**
-
-    在项目根目录下，创建或编辑 `config.cfg` 文件，内容如下：
+   在项目根目录下，创建或编辑 `config.cfg` 文件，内容如下：
 
     ```ini
     [default]
@@ -49,7 +22,7 @@ PDFConverter 是一个用于批量将 PDF 文件转换为 Word 文档的 Python 
     max_worker = 最大并行进程数
     ```
 
-    **示例：**
+   **示例：**
 
     ```ini
     [default]
@@ -58,19 +31,20 @@ PDFConverter 是一个用于批量将 PDF 文件转换为 Word 文档的 Python 
     max_worker = 4
     ```
 
-5. **准备输入目录**
+2. **准备输入目录**
 
-    将您想要转换的 PDF 文件放入 `pdf_folder` 指定的目录中。脚本会遍历该目录下的所有 PDF 文件，并进行转换。
+   将您想要转换的 PDF 文件放入 `pdf_folder` 指定的目录中。脚本会遍历该目录下的所有 PDF 文件，并进行转换。
 
-6. **运行脚本**
+3. **运行脚本**
 
     ```bash
+    cd pdf2word
     python main.py
     ```
 
-7. **查看输出**
+4. **查看输出**
 
-    转换完成后，Word 文档将保存到 `word` 指定的目录中。
+   转换完成后，Word 文档将保存到 `word` 指定的目录中。
 
 ## 代码结构 🗂️
 
