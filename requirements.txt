@@ -1,0 +1,6 @@
+colorlog==6.8.2
+fontTools==4.54.1
+IPy==1.01
+pdf2docx==0.5.8
+Pillow==10.4.0
+rich==13.8.1
